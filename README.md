@@ -1,4 +1,4 @@
-# Rectangle
+# Brickles
 
 Source files for CS 583 assignment #3 Brickles.
 
