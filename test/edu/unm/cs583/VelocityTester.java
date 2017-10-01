@@ -39,6 +39,14 @@ public class VelocityTester {
 		assertEquals(225, v3.getDirection());
 		assertEquals(315, v4.getDirection());
 		
+		// test with 0 and 360, as they are the edge cases
+		Velocity v0 = new Velocity(0, 0);
+		Velocity v360 = new Velocity(0, 360);
+		
+		assertEquals(0, v0.getDirection());
+		assertEquals(0, v360.getDirection());
+		
+		
 	}
 
 }
