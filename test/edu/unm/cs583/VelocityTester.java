@@ -27,8 +27,8 @@ public class VelocityTester {
 	
 	@Test
 	public void testGetDirection()	{
-		Velocity v = new Velocity(0, 45);
-		assertEquals(45, v.getDirection());
+		Velocity v1 = new Velocity(0, 45);
+		assertEquals(45, v1.getDirection());
 	}
 
 }
