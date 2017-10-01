@@ -24,11 +24,14 @@ public class VelocityTester {
 		   out.setDirection(45);
 		   assertEquals("Result", 45, out.getDirection());
 		   
-		   out.setDirection(0);
-		   assertEquals(0, out.getDirection());
+		   out.setDirection(135);
+		   assertEquals(135, out.getDirection());
 		   
-		   out.setDirection(360);
-		   assertEquals(0, out.getDirection());
+		   out.setDirection(225);
+		   assertEquals(225, out.getDirection());
+		   
+		   out.setDirection(315);
+		   assertEquals(315, out.getDirection());
 		}
 
 }
