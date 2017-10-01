@@ -22,11 +22,12 @@ public class VelocityTester {
 	public void testSetDirection() {
 		Velocity out = new Velocity();
 		
-		// use an enhanced for-loop to test one angle from every quadrant 
-		int[] angles = new int[] {45, 135, 225, 315}; 
-		for(int angle: angles) {
+		// use an enhanced for-loop to test one angle from every quadrant  
+		for(int angle: new int[] {45, 135, 225, 315}) {
 			out.setDirection(angle);
 			assertEquals(angle, out.getDirection());
 		}
+		
+		
 	}
 }
