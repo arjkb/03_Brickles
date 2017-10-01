@@ -24,5 +24,11 @@ public class VelocityTester {
 		   out.setDirection(45);
 		   assertEquals("Result", 45, out.getDirection());
 		}
+	
+	@Test
+	public void testGetDirection()	{
+		Velocity v = new Velocity(0, 45);
+		assertEquals(45, v.getDirection());
+	}
 
 }
