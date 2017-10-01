@@ -28,6 +28,11 @@ public class VelocityTester {
 			assertEquals(angle, out.getDirection());
 		}
 		
-		
+		// test angles 0 and 360. Should return 0 in both cases.
+		out.setDirection(0);
+		assertEquals(0, out.getDirection());
+				
+		out.setDirection(360);
+		assertEquals(0, out.getDirection());		
 	}
 }
