@@ -27,8 +27,18 @@ public class VelocityTester {
 	
 	@Test
 	public void testGetDirection()	{
+		
+		// test with one direction from each of the 4 quadrants
 		Velocity v1 = new Velocity(0, 45);
+		Velocity v2 = new Velocity(0, 135);
+		Velocity v3 = new Velocity(0, 225);
+		Velocity v4 = new Velocity(0, 315);
+		
 		assertEquals(45, v1.getDirection());
+		assertEquals(135, v2.getDirection());
+		assertEquals(225, v3.getDirection());
+		assertEquals(315, v4.getDirection());
+		
 	}
 
 }
