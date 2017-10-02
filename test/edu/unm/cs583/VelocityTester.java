@@ -38,7 +38,7 @@ public class VelocityTester {
 
 		v = new Velocity(50, 200);
 		v.reverseX();
-		assertEquals(-46, v.getSpeedX());
+		assertEquals(46, v.getSpeedX());
 		assertEquals(340, v.getDirection());
 
 
