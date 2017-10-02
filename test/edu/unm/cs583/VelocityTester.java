@@ -15,8 +15,60 @@ public class VelocityTester {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
 	@Test
+	public void testReverseY()	{
+		Velocity v;
+		
+		// positive test cases
+		v = new Velocity(0, 90);
+		v.reverseY();
+		assertEquals(0, v.getSpeedY());
+		assertEquals(270, v.getDirection());
+		
+		v = new Velocity(100, 0);
+		v.reverseY();
+		assertEquals(0, v.getSpeedY());
+		assertEquals(0, v.getDirection());
+		
+		v = new Velocity(100, 90);
+		v.reverseY();
+		assertEquals(-100, v.getSpeedY());
+		assertEquals(270, v.getDirection());
+		
+		v = new Velocity(100, 360);
+		v.reverseY();
+		assertEquals(0, v.getSpeedY());
+		assertEquals(0, v.getDirection());
+		
+		v = new Velocity(100, 480);
+		v.reverseY();
+		assertEquals(-86, v.getSpeedY());
+		assertEquals(-120, v.getDirection());
+		
+		
+		// negative test cases
+		v = new Velocity(-100, 0);
+		v.reverseY();
+		assertEquals(0, v.getSpeedY());
+		assertEquals(0, v.getDirection());
+		
+		v = new Velocity(-100, 90);
+		v.reverseY();
+		assertEquals(100, v.getSpeedY());
+		assertEquals(270, v.getDirection());
+		
+		v = new Velocity(-100, 360);
+		v.reverseY();
+		assertEquals(0, v.getSpeedY());
+		assertEquals(0, v.getDirection());
+		
+		v = new Velocity(-100, 480);
+		v.reverseY();
+		assertEquals(86, v.getSpeedY());
+		assertEquals(-120, v.getDirection());
+	}
+
 	/**
 	 * public void test() { fail("Not yet implemented");
 	 **/
