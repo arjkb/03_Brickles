@@ -16,6 +16,7 @@ public class VelocityTester {
 	public void tearDown() throws Exception {
 	}
 	
+	@Test
 	public void testReverseY()	{
 		Velocity v;
 		
@@ -32,17 +33,17 @@ public class VelocityTester {
 		
 		v = new Velocity(100, 90);
 		v.reverseY();
-		assertEquals(-99, v.getSpeedY());
+		assertEquals(-100, v.getSpeedY());
 		assertEquals(270, v.getDirection());
 		
 		v = new Velocity(100, 360);
 		v.reverseY();
-		assertEquals(6, v.getSpeedY());
+		assertEquals(0, v.getSpeedY());
 		assertEquals(0, v.getDirection());
 		
 		v = new Velocity(100, 480);
 		v.reverseY();
-		assertEquals(-90, v.getSpeedY());
+		assertEquals(-86, v.getSpeedY());
 		assertEquals(-120, v.getDirection());
 		
 		
@@ -54,17 +55,17 @@ public class VelocityTester {
 		
 		v = new Velocity(-100, 90);
 		v.reverseY();
-		assertEquals(99, v.getSpeedY());
+		assertEquals(100, v.getSpeedY());
 		assertEquals(270, v.getDirection());
 		
 		v = new Velocity(-100, 360);
 		v.reverseY();
-		assertEquals(-6, v.getSpeedY());
+		assertEquals(0, v.getSpeedY());
 		assertEquals(0, v.getDirection());
 		
 		v = new Velocity(-100, 480);
 		v.reverseY();
-		assertEquals(90, v.getSpeedY());
+		assertEquals(86, v.getSpeedY());
 		assertEquals(-120, v.getDirection());
 	}
 
