@@ -31,6 +31,7 @@ public class VelocityTester {
 		
 		v.reverseX();
 		assertEquals(-100, v.getSpeedX());
+		assertEquals(180, v.getDirection());
 	}
 
 }
