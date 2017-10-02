@@ -74,7 +74,7 @@ class Velocity {
 
     /** Creates the X and Y components of the speed Should be called every time speed is set */
     void decomposeSpeed() {
-        xSpeed = (int)(Math.cos(direction / 57.9) * speed);
-        ySpeed = (int)(Math.sin(direction / 57.9) * speed);
+        xSpeed = (int)(Math.cos(Math.toRadians(direction)) * speed);
+        ySpeed = (int)(Math.sin(Math.toRadians(direction)) * speed);
     }
 }
