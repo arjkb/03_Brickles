@@ -44,7 +44,7 @@ public class VelocityTester {
 		v = new Velocity(100, 480);
 		v.reverseY();
 		assertEquals(-86, v.getSpeedY());
-		assertEquals(-120, v.getDirection());
+		assertEquals(240, v.getDirection());
 		
 		
 		// negative test cases
@@ -66,7 +66,7 @@ public class VelocityTester {
 		v = new Velocity(-100, 480);
 		v.reverseY();
 		assertEquals(86, v.getSpeedY());
-		assertEquals(-120, v.getDirection());
+		assertEquals(240, v.getDirection());
 	}
 
 	/**
