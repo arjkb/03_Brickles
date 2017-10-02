@@ -42,7 +42,7 @@ public class VelocityTester {
 		assertEquals(2, v.getSpeedX());
 
 		Velocity v2 = new Velocity(360, 90);
-		assertEquals(5, v2.getSpeedX());
+		assertEquals(0, v2.getSpeedX());
 
 	}
 
@@ -52,7 +52,7 @@ public class VelocityTester {
 		assertEquals(0, v.getSpeedY());
 
 		Velocity v2 = new Velocity(360, 90);
-		assertEquals(359, v2.getSpeedY());
+		assertEquals(360, v2.getSpeedY());
 	}
 	
 	@Test
@@ -68,13 +68,13 @@ public class VelocityTester {
 		
 		v.setDirection(90);
 		v.decomposeSpeed();
-		assertEquals(5, v.getSpeedX());
-		assertEquals(359, v.getSpeedY());
+		assertEquals(0, v.getSpeedX());
+		assertEquals(360, v.getSpeedY());
 		
 		v.setDirection(200);
 		v.decomposeSpeed();
-		assertEquals(-342, v.getSpeedX());
-		assertEquals(-110, v.getSpeedY());
+		assertEquals(-338, v.getSpeedX());
+		assertEquals(-123, v.getSpeedY());
 		
 	}
 }
