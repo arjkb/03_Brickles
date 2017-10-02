@@ -27,16 +27,24 @@ public class VelocityTester {
 	
 	@Test
 	public void testReverseX()	{
-		Velocity v = new Velocity(100, 0);
+		Velocity v;
 		
+		v = new Velocity(100, 0);
 		v.reverseX();
 		assertEquals(-100, v.getSpeedX());
 		assertEquals(180, v.getDirection());
+	
 		
 		v = new Velocity(0, 0);
 		v.reverseX();
 		assertEquals(0, v.getSpeedX());
 		assertEquals(180, v.getDirection());
+		
+		
+		v = new Velocity(100, 45);
+		v.reverseX();
+		assertEquals(-71, v.getSpeedX());
+		assertEquals(135, v.getDirection());
 	}
 
 }
