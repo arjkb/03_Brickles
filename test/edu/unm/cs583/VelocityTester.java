@@ -43,6 +43,11 @@ public class VelocityTester {
 		v.reverseY();
 		assertEquals(6, v.getSpeedY());
 		assertEquals(0, v.getDirection());
+		
+		v = new Velocity(100, 480);
+		v.reverseY();
+		assertEquals(-90, v.getSpeedY());
+		assertEquals(-120, v.getDirection());
 	}
 
 }
