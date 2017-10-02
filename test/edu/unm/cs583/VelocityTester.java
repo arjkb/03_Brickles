@@ -16,6 +16,7 @@ public class VelocityTester {
 	public void tearDown() throws Exception {
 	}
 
+	// Arjun Krishna Babu
 	@Test
 	public void testReverseX()	{
 		Velocity v;
@@ -49,6 +50,8 @@ public class VelocityTester {
 		assertEquals(180, v.getDirection());
 	}
 	
+	// Arjun Krishna Babu
+	@Test
 	public void testReverseY()	{
 		Velocity v;
 
@@ -101,9 +104,7 @@ public class VelocityTester {
 		assertEquals(240, v.getDirection());
 	}
 
-	/**
-	 * public void test() { fail("Not yet implemented");
-	 **/
+	// Arjun Krishna Babu
 	@Test
 	public void testSetDirection() {
 		Velocity out = new Velocity();
@@ -126,6 +127,7 @@ public class VelocityTester {
 		assertEquals(1, out.getDirection());
 	}
 	
+	// Arjun Krishna Babu
 	@Test
 	public void testGetDirection()	{
 		
