@@ -121,7 +121,9 @@ public class VelocityTester {
 		out.setDirection(360);
 		assertEquals(0, out.getDirection());
 		
-
+		// test angle 361. Should return 1.
+		out.setDirection(361);
+		assertEquals(1, out.getDirection());
 	}
 	
 	@Test
