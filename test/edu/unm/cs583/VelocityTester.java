@@ -29,6 +29,11 @@ public class VelocityTester {
 	public void testReverseY()	{
 		Velocity v;
 		
+		v = new Velocity(0, 90);
+		v.reverseY();
+		assertEquals(0, v.getSpeedY());
+		assertEquals(270, v.getDirection());
+		
 		v = new Velocity(100, 90);
 		v.reverseY();
 		assertEquals(-99, v.getSpeedY());
