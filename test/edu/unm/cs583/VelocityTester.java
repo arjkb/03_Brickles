@@ -17,7 +17,39 @@ public class VelocityTester {
 	}
 
 	@Test
-	public void testReverseY() {
+	public void testReverseX()	{
+		Velocity v;
+
+		// positive test cases
+		v = new Velocity(100, 0);
+		v.reverseX();
+		assertEquals(-100, v.getSpeedX());
+		assertEquals(180, v.getDirection());
+
+		v = new Velocity(0, 0);
+		v.reverseX();
+		assertEquals(0, v.getSpeedX());
+		assertEquals(180, v.getDirection());
+
+		v = new Velocity(100, 45);
+		v.reverseX();
+		assertEquals(-70, v.getSpeedX());
+		assertEquals(135, v.getDirection());
+
+		v = new Velocity(50, 200);
+		v.reverseX();
+		assertEquals(46, v.getSpeedX());
+		assertEquals(340, v.getDirection());
+
+
+		// negative test case
+		v = new Velocity(-100, 0);
+		v.reverseX();
+		assertEquals(100, v.getSpeedX());
+		assertEquals(180, v.getDirection());
+	}
+	
+	public void testReverseY()	{
 		Velocity v;
 
 		// positive test cases
@@ -134,6 +166,7 @@ public class VelocityTester {
 		// getSpeedX() should always be
 		// zero here.
 		Velocity v2 = new Velocity(360, 90);
+
 		assertEquals(0, v2.getSpeedX());
 
 	}
@@ -166,11 +199,13 @@ public class VelocityTester {
 		assertEquals(360, v.getSpeedX());
 		assertEquals(0, v.getSpeedY());
 
+
 		// Testing the changing of direction
 		// to see if the getSpeedY gets all of the
 		// speed
 		v.setDirection(90);
 		v.decomposeSpeed();
+
 		assertEquals(0, v.getSpeedX());
 		assertEquals(360, v.getSpeedY());
 
