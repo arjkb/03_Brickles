@@ -107,9 +107,24 @@ public class VelocityTester {
 	@Test
 	public void testSetDirection() {
 		Velocity out = new Velocity();
-		   out.setDirection(45);
-		   assertEquals("Result", 45, out.getDirection());
+		
+		// use an enhanced for-loop to test one angle from every quadrant  
+		for(int angle: new int[] {45, 135, 225, 315}) {
+			out.setDirection(angle);
+			assertEquals(angle, out.getDirection());
 		}
+		
+		// test angles 0 and 360. Should return 0 in both cases.
+		out.setDirection(0);
+		assertEquals(0, out.getDirection());
+				
+		out.setDirection(360);
+		assertEquals(0, out.getDirection());
+		
+		// test angle 361. Should return 1.
+		out.setDirection(361);
+		assertEquals(1, out.getDirection());
+	}
 	
 	@Test
 	public void testGetDirection()	{
