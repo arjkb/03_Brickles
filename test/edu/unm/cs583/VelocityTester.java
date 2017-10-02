@@ -29,15 +29,10 @@ public class VelocityTester {
 	public void testReverseX()	{
 		Velocity v;
 		
+		// positive test cases
 		v = new Velocity(100, 0);
 		v.reverseX();
 		assertEquals(-100, v.getSpeedX());
-		assertEquals(180, v.getDirection());
-		
-		
-		v = new Velocity(-100, 0);
-		v.reverseX();
-		assertEquals(100, v.getSpeedX());
 		assertEquals(180, v.getDirection());
 	
 		
@@ -57,6 +52,12 @@ public class VelocityTester {
 		v.reverseX();
 		assertEquals(47, v.getSpeedX());
 		assertEquals(340, v.getDirection());
+		
+		// negative test case
+		v = new Velocity(-100, 0);
+		v.reverseX();
+		assertEquals(100, v.getSpeedX());
+		assertEquals(180, v.getDirection());
 	}
 
 }
