@@ -15,15 +15,6 @@ public class VelocityTester {
 	@After
 	public void tearDown() throws Exception {
 	}
-
-	@Test
-	/** public void test() {
-		fail("Not yet implemented"); **/
-	public void testSetDirection() {
-		Velocity out = new Velocity();
-		   out.setDirection(45);
-		   assertEquals("Result", 45, out.getDirection());
-		}
 	
 	@Test
 	public void testReverseX()	{
