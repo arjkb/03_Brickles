@@ -24,7 +24,7 @@ class Velocity {
      *@param newDirection Defines the initial direction
      */
     public Velocity(int newSpeed, int newDirection) {
-        direction = newDirection;
+        this.setDirection(newDirection);
         this.setSpeed(newSpeed);
         decomposeSpeed();
     }
